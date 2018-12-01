@@ -8,7 +8,7 @@ const app = express();
 const awaitingOrders = new Map();
 const API_URL = 'http://campusdining.vanderbilt.edu/?action=cmi_yoir&request=orderqueue_ajax&location_id=752';
 
-app.get("/api/register", (req, res) => {
+app.post("/api/register", (req, res) => {
     const body = JSON.parse(req.body);
 
     if (body.phone && body.order && body.password) {
