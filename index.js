@@ -63,4 +63,4 @@ const clearOld = () => {
 
 setInterval(refreshOrders, 10000);
 setInterval(clearOld, 7200);
-app.listen(process.env['LHD_PORT'], console.log('Pub Notifications ready on port ' + process.env['LHD_PORT']))
+app.listen(process.env['LHD_PORT'], () => {console.log('Pub Notifications ready on port ' + process.env['LHD_PORT'])})
